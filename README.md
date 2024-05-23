@@ -22,7 +22,7 @@ And we get our first flag :</p>
 <strong>List of Databases :</strong></p>
 <pre><code>sqlmap -u "http://74.225.254.195:2324/getBlogDetail?blog=1&amp;part=link" --dbs
 </code></pre>
-<p>[<img src="https://i.postimg.cc/X7SPQf3s/image.png" alt="image.png">]<br>
+<p><img src="https://i.postimg.cc/X7SPQf3s/image.png" alt="image.png"><br>
 <strong>List of Tables :</strong></p>
 <pre><code>sqlmap -u "http://74.225.254.195:2324/getBlogDetail?blog=1&amp;part=link" -D pclub_secy_task --tables
 </code></pre>
@@ -35,9 +35,9 @@ And we get our first flag :</p>
 <p><img src="https://gcdnb.pbrd.co/images/GmHycIFu12Br.png" alt="sqlmap output"><br>
 After dumping the data in the csv format and opening it , we find a list of usernames and associated password hashes and username hashes , from the data in the hints table its clear these hashes are MD5 hashes . A quick search of these hashes on known hashes website <a href="http://Hashes.com">Hashes.com</a>. Reveals that all of these hashes are of passwords which have already been leaked in the internet before .</p>
 <p><img src="https://gcdnb.pbrd.co/images/punnvoGcdu8x.png" alt="hashes"><br>
-<img src="!%5B%5D(%60https://gcdnb.pbrd.co/images/n2bdDiBVzAXm.png?o=1%60)" alt="unhashed"><br>
+<img src="https://gcdnb.pbrd.co/images/n2bdDiBVzAXm.png?o=1" alt="unhashed"><br>
 After logging in with the user:pass of kaptaan we get the flag ,<br>
-<img src="!%5B%5D(https://gcdnb.pbrd.co/images/oUCbPUjJZcrX.png?o=1)" alt="sqli_flag"></p>
+![sqli_flag](<img src="https://gcdnb.pbrd.co/images/oUCbPUjJZcrX.png?o=1" alt=""></p>
 <p>Logging in with the password obtained for ritvikg22 gets us to the link of the pwn_task , whereas logging in with amansg22 gets us the log of Aerial Robotics IITK. Uploading this image on <a href="https://www.aperisolve.com/">aperisolve</a> which is a website which checks an image against common steg tactics applied on the image reveals a QR code embedded inside it.</p>
 <p><img src="https://i.postimg.cc/GtSZmN6r/image.png" alt="Flag_4"></p>
 <p>Scanning that QR code gives the flag.</p>
