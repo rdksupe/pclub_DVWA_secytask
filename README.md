@@ -12,7 +12,7 @@ And we get our first flag :</p>
 <p>For the next flag following the hint leads to the /ipDetails where a simple test for command injection via simple payload of |ifconfig reveals the flag.</p>
 <pre><code>60:45:bd:af:3f:e5
 </code></pre>
-<p><img src="https://s12.gifyu.com/images/Sf9mv.md.gif" alt="flag2"></p>
+<p><img src="https://i.postimg.cc/wvS9W1TD/task14.gif" alt="flag2"></p>
 <p>For the next flag possibilities of exploitation exists in the routes /secretary_login and /blogs . Going to secretary login route shows a simple login form which use multipart-form data for sending a POST request. Testing this route using SQlmap for Sqli reveals it to be non injectable. Hence we shift our attention to the /blogs route where for rendering of the blogs /getBlogDetail path is used. Putting this route to test indeed reveals that it is vulnerable to SQL Injection.</p>
 <p>Further using the following commands in SQLMap allows us to get the list of DBs , using which we can query for the tables and the columns in those tables.</p>
 <p><strong>For testing against SQLinjection :</strong></p>
